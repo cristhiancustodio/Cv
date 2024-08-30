@@ -1,0 +1,57 @@
+{
+    "experiencia": [
+        {
+            "empresa": "Mediweb",
+            "anio": "02/2023 - 07/2024",
+            "titulo": "Analista programador",
+            "descripcion": "Backend",
+            "lugar": "Surquillo - Lima - Perú",
+            "detalle_trabajo":"Forme parte del área de soporte técnico en mis primeros meses como trabajador. \nDespués pase al área de proyectos donde realice funcionalidades más complejas para distintos sistemas que tenía la empresa.\n Desarrollé impresiones en html que se le ofrecia al paciente una vez culminada toda su atención en la clínica."
+        },
+        {
+            "empresa": "CCAPA TENCNOLOGIAS DE INFORMACIÓN- Practicante",
+            "anio": "10/2022 - 01/2023",
+            "titulo": "Practicante programador",
+            "descripcion": "Backend",
+            "lugar": "La Molina - Perú",
+            "detalle_trabajo":"Realice mis practicas pre profesionales desarrollando un sistema de asistencias y un sistema donde podian registrar postulantes a empresas donde podian seleccionar quienes estaban aptos para seguir con el proceso de selección. \n Ademas forme parte de un inventario de software para la municipalidad de Santa Anita."
+        }
+    ],
+    "educacion":[
+        {
+            "titulo":"TÉCNICO EN INGENIERÍA DE SOFTWARE",
+            "institucion" : "SENATI",
+            "lugar": "Lima - Perú",
+            "inicio" : "2020",
+            "final" : "2023",
+            "descripcion" : "Inicie mis estudios en el año 2020 culminando en Agosto del 2023.\n Me forme para el área de backend creando proyectos propuestos por la institución.\n"
+        }
+    ],
+    "proyectos":[
+        {
+            "titulo" : "Sistema de asistencias con geolocalización",
+            "descripcion" : "Este sistema puede tomar la ubicación actual del usuario y marcar su asistencia siempre y cuando este en el lugar donde se le asigno desde el sistema.\n Tiene roles y permisos para que el usuario solo pueda ver algunas partes del sistema.\n\n Se realizo con : \n* Codeigniter 4 \n* Mysql",
+            "imagen" : [
+                "img/asistencia1.png",
+                "img/asistencia2.png"
+            ]
+        },
+        {
+            "titulo" : "Reclutamiento de personal",
+            "descripcion" : "El aporte es tener un control de personas que han postulado a una empresa, tener sus datos, archivos o fotos y el personal que use pueda seleccionar que postulantes han pasado a una siguiente etapa del proceso  de selección.\n\n Este sistema tiene:\n\t* Envio de correo \n* Vista de archivos \n * Calendario",
+            "imagen" : [
+                "img/reclutamiento1.png",
+                "img/reclutamiento2.png"
+            ]
+        },
+        {
+            "titulo" : "Clone de CineStar",
+            "descripcion" : "Realice este clon de cinestar para poder usarlo y crear las páginas en distintos lenguajes y frameworks y practicar con ello.\n Tecnologías:\n * Flask\n * NodeJS - Express\n * Laravel\n",
+            "imagen" : [
+                "img/cinestar1.png",
+                "img/cinestar2.png",
+                "img/cinestar3.png"
+            ]
+        }
+    ]
+}

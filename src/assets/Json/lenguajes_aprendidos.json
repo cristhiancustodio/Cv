@@ -1,0 +1,39 @@
+[
+    {
+        "titulo": "PHP",
+        "icono": "php.svg"
+    },
+    {
+        "titulo": "JavaScript",
+        "icono": "js.svg"
+    },
+    {
+        "titulo": "Python",
+        "icono": "python.svg"
+    },
+    {
+        "titulo": "Vue3",
+        "icono": "vue.svg"
+    },
+    {
+        "titulo": "Axios",
+        "icono": "axios.svg"
+    },
+    {
+        "titulo": "JQuery",
+        "icono": "jquery.svg"
+    },
+    {
+        "titulo": "Laravel",
+        "icono": "laravel.svg"
+    },
+    {
+        "titulo": "Codeigniter",
+        "icono": "codeigniter.svg"
+    },
+    {
+        "titulo": "Bootstrap",
+        "icono": "bootstrap.svg"
+    }
+
+]

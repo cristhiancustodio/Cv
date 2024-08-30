@@ -1,0 +1,32 @@
+[
+    {
+        "titulo": "GIT",
+        "icono": "git.svg"
+    },
+    {
+        "titulo": "SourceTree",
+        "icono": "sourcetree.png"
+    },
+
+    {
+        "titulo": "Jira",
+        "icono": "jira.svg"
+    },
+
+    {
+        "titulo": "HTML",
+        "icono": "html.svg"
+    },
+    {
+        "titulo": "CSS",
+        "icono": "css.svg"
+    },
+    {
+        "titulo": "SQLServer",
+        "icono": "sql_server.svg"
+    },
+    {
+        "titulo": "MySql",
+        "icono": "mysql.svg"
+    }
+]
