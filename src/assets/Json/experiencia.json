@@ -29,24 +29,27 @@
     ],
     "proyectos":[
         {
+            "id": 1,
             "titulo" : "Sistema de asistencias con geolocalización",
-            "descripcion" : "Este sistema puede tomar la ubicación actual del usuario y marcar su asistencia siempre y cuando este en el lugar donde se le asigno desde el sistema.\n Tiene roles y permisos para que el usuario solo pueda ver algunas partes del sistema.\n\n Se realizo con : \n* Codeigniter 4 \n* Mysql",
+            "descripcion" : "Este sistema puede tomar la ubicación actual del usuario y marcar su asistencia siempre y cuando este en el lugar donde se le asigno desde el sistema.\n Tiene roles y permisos para que el usuario solo pueda ver algunas partes del sistema.",
             "imagen" : [
                 "img/asistencia1.png",
                 "img/asistencia2.png"
             ]
         },
         {
+            "id": 2,
             "titulo" : "Reclutamiento de personal",
-            "descripcion" : "El aporte es tener un control de personas que han postulado a una empresa, tener sus datos, archivos o fotos y el personal que use pueda seleccionar que postulantes han pasado a una siguiente etapa del proceso  de selección.\n\n Este sistema tiene:\n\t* Envio de correo \n* Vista de archivos \n * Calendario",
+            "descripcion" : "El aporte es tener un control de personas que han postulado a una empresa, tener sus datos, archivos o fotos y el personal que use pueda seleccionar que postulantes han pasado a una siguiente etapa del proceso  de selección.",
             "imagen" : [
                 "img/reclutamiento1.png",
                 "img/reclutamiento2.png"
             ]
         },
         {
+            "id": 3,
             "titulo" : "Clone de CineStar",
-            "descripcion" : "Realice este clon de cinestar para poder usarlo y crear las páginas en distintos lenguajes y frameworks y practicar con ello.\n Tecnologías:\n * Flask\n * NodeJS - Express\n * Laravel\n",
+            "descripcion" : "Realice este clon de cinestar para poder usarlo y crear las páginas en distintos lenguajes y frameworks y practicar con ello.",
             "imagen" : [
                 "img/cinestar1.png",
                 "img/cinestar2.png",

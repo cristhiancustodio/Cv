@@ -11,9 +11,20 @@ export default {
         formattedDescripcion(texto) {
             return formatTexto(texto);
         },
+        pasarMinusculaSlash(texto){
+             // Normalizar el texto para descomponer caracteres acentuados
+            let textoNormalizado = texto.normalize('NFD');
+            // Eliminar tildes y caracteres especiales usando una expresión regular
+            let textoSinTildes = textoNormalizado.replace(/[\u0300-\u036f]/g, '');
+            // Reemplazar caracteres especiales restantes y espacios con guiones
+            let textoUrl = textoSinTildes
+                .replace(/ñ/g, 'n')       // Reemplazar ñ con n
+                .replace(/[^a-zA-Z0-9]+/g, '-') // Reemplazar cualquier carácter no alfanumérico (espacios y signos de puntuación) con guiones
+                .toLowerCase()            // Convertir todo a minúsculas
+                .replace(/^-+|-+$/g, ''); // Eliminar guiones al inicio y al final
+            return textoUrl;
+        }
     }
-
-
 }
 </script>
 <template>
@@ -26,15 +37,12 @@ export default {
             </div>
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-11 col-xxl-11">
-
-
                     <!-- Project Card 1-->
-                    <div class="card overflow-hidden shadow rounded-4 border-0 mb-5"
-                        v-for="(item, indice) in lista_proyectos" :key="indice">
+                    <div class="card overflow-hidden shadow rounded-4 border-0 mb-5" v-for="(item, indice) in lista_proyectos" :key="indice">
                         <div class="card-body p-0">
                             <div class="row">
                                 <div class="col-12 col-lg-6 col-sm-12 col-xs-12 p-5">
-                                    <h2 class="fw-bolder">{{ item.titulo }}</h2>
+                                    <RouterLink :to="'/proyecto/' + (item.id)" class=""><h4 class="fw-bolder">{{ item.titulo }}</h4></RouterLink> 
                                     <p v-html="formattedDescripcion(item.descripcion)" ></p>
                                 </div>
                                 <div class="col-12 col-lg-6 col-sm-12 col-xs-12">
@@ -66,9 +74,6 @@ export default {
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -84,4 +89,4 @@ export default {
         </div>
     </section>
 
-</template>@/assets/js/utils
+</template>
