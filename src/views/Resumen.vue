@@ -41,21 +41,24 @@ export default {
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <!-- Experience Section-->
                     <section>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <h2 class="text-primary fw-bolder mb-0">Experiencia</h2>
+                        <div class="row mb-4">
+                            <div class="col-12 col-lg-9">
+                                <h2 class="text-primary text-lg-start text-center fw-bolder mb-0">Experiencia</h2>
+                            </div>
                             <!-- Download resume button-->
                             <!-- Note: Set the link href target to a PDF file within your project-->
-                            <a class="btn btn-primary px-4 py-3" href="/storage/micv/cv_cristhian_custodio.pdf" download>
-                                <div class="d-inline-block bi bi-download me-2"></div>
-                                Descargar CV
-                            </a>
+                            <div class="col-12 col-lg-3">
+                                <a class="btn btn-sm btn-primary px-2 py-2 w-100" href="/storage/micv/cv_cristhian_custodio.pdf" download>
+                                    <div class="d-inline-block bi bi-download me-2"></div>Descargar CV
+                                </a>
+                            </div>
                         </div>
                         <!-- Experience Card 1-->
 
 
 
                         <div class="card shadow border-0 rounded-4 mb-5" v-for="(item, indice) in lista_experiencia" >
-                            <div class="card-body p-5">
+                            <div class="card-body p-4">
                                 <div class="row align-items-center gx-5">
                                     <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4">
@@ -82,7 +85,7 @@ export default {
                         <!-- Education Card 1-->
 
                         <div class="card shadow border-0 rounded-4 mb-5" v-for="(item, indice) in lista_educacion">
-                            <div class="card-body p-5">
+                            <div class="card-body p-4">
                                 <div class="row align-items-center gx-5">
                                     <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4">
@@ -109,17 +112,36 @@ export default {
                     <section>
                         <!-- Skillset Card-->
                         <div class="card shadow border-0 rounded-4 mb-5">
-                            <div class="card-body p-5">
+                            <div class="card-body p-lg-5 p-4">
                                 <!-- Professional skills list-->
-
                                 <ComponenteCartaResumen 
-                                titulo_cartilla="Habilidades profesionales" 
-                                :listado="lista_habilidades" 
+                                titulo_cartilla="Frontend" 
+                                :listado="lista_habilidades.frontend" 
+                                icono_cabecera="bi bi-code-slash"
+                                />
+                                <ComponenteCartaResumen 
+                                titulo_cartilla="Backend" 
+                                :listado="lista_habilidades.backend" 
+                                icono_cabecera="bi bi-code-slash"
+                                />
+                                <ComponenteCartaResumen 
+                                titulo_cartilla="Base de datos" 
+                                :listado="lista_habilidades.base_datos" 
+                                icono_cabecera="bi bi-code-slash"
+                                />
+                                <ComponenteCartaResumen 
+                                titulo_cartilla="Frameworks" 
+                                :listado="lista_habilidades.frameworks" 
+                                icono_cabecera="bi bi-code-slash"
+                                />
+                                <ComponenteCartaResumen 
+                                titulo_cartilla="Herramientas" 
+                                :listado="lista_habilidades.herramientas" 
                                 icono_cabecera="bi bi-tools"
                                 />
                                 <ComponenteCartaResumen 
-                                titulo_cartilla="Languajes / Frameworks" 
-                                :listado="lista_lenguajes" 
+                                titulo_cartilla="Nociones basicas" 
+                                :listado="lista_habilidades.pendiente" 
                                 icono_cabecera="bi bi-code-slash"
                                 />
                             </div>

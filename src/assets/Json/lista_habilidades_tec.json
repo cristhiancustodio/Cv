@@ -1,32 +1,115 @@
-[
-    {
-        "titulo": "GIT",
-        "icono": "git.svg"
-    },
-    {
-        "titulo": "SourceTree",
-        "icono": "sourcetree.png"
-    },
-
-    {
-        "titulo": "Jira",
-        "icono": "jira.svg"
-    },
-
-    {
-        "titulo": "HTML",
-        "icono": "html.svg"
-    },
-    {
-        "titulo": "CSS",
-        "icono": "css.svg"
-    },
-    {
-        "titulo": "SQLServer",
-        "icono": "sql_server.svg"
-    },
-    {
-        "titulo": "MySql",
-        "icono": "mysql.svg"
-    }
-]
+{
+    "frontend": [
+        {
+            "titulo": "HTML",
+            "icono": "html.svg"
+        },
+        {
+            "titulo": "CSS",
+            "icono": "css.svg"
+        },
+        {
+            "titulo": "JS",
+            "icono": "js.svg"
+        },
+        {
+            "titulo": "Bootstrap",
+            "icono": "bootstrap.svg"
+        },
+        {
+            "titulo": "JQuery",
+            "icono": "jquery.svg"
+        },
+        {
+            "titulo": "Axios",
+            "icono": "axios.svg"
+        }
+        
+    ],
+    "backend":[
+        {
+            "titulo": "PHP",
+            "icono": "php.svg"
+        },
+        {
+            "titulo": "Node js",
+            "icono": "nodejs.svg"
+        },
+        {
+            "titulo": "Python",
+            "icono": "python.svg"
+        }
+    ],
+    "frameworks":[
+        {
+            "titulo": "Laravel",
+            "icono": "laravel.svg"
+        },
+        {
+            "titulo": "Codeigniter",
+            "icono": "codeigniter.svg"
+        },
+        {
+            "titulo": "Flask",
+            "icono": "flask.svg"
+        },
+        {
+            "titulo": "Vue 3",
+            "icono": "vue.svg"
+        }
+    ],
+    "base_datos" :[
+        {
+            "titulo": "SQLServer",
+            "icono": "sql_server.svg"
+        },
+        {
+            "titulo": "MySql",
+            "icono": "mysql.svg"
+        }
+    ],
+    "herramientas":[
+        {
+            "titulo": "GIT",
+            "icono": "git.svg"
+        },
+        {
+            "titulo": "SourceTree",
+            "icono": "sourcetree.png"
+        },
+        {
+            "titulo": "Jira",
+            "icono": "jira.svg"
+        },
+        {
+            "titulo": "Postman",
+            "icono": "postman.png"
+        }
+    ],
+    "pendiente":[
+        {
+            "titulo": "React",
+            "icono": "react.svg"
+        },
+        {
+            "titulo": "Docker",
+            "icono": "docker.svg"
+        },
+        {
+            "titulo": "Microsoft Azure",
+            "icono": "azure.svg"
+        },
+        {
+            "titulo": "Express",
+            "icono": "express.svg"
+        },
+        {
+            "titulo": "Java",
+            "icono": "java.svg"
+        },
+        {
+            "titulo": "Xamarin",
+            "icono": "xamarin.svg"
+        }
+    ]
+}
