@@ -1,6 +1,8 @@
 <script>
+import Contruyamos from "@/components/Contruyamos.vue";
 import lista_experiencia from "../assets/Json/experiencia.json"
 import { formatTexto } from "@/assets/js/utils";
+
 export default {
     data() {
         return {
@@ -24,6 +26,9 @@ export default {
                 .replace(/^-+|-+$/g, ''); // Eliminar guiones al inicio y al final
             return textoUrl;
         }
+    },
+    components: {
+        Contruyamos
     }
 }
 </script>
@@ -79,14 +84,6 @@ export default {
         </div>
     </section>
     <!-- Call to action section-->
-    <section class="py-5 bg-gradient-primary-to-secondary text-white">
-        <div class="container px-5 my-5">
-            <div class="text-center">
-                <h2 class="display-4 fw-bolder mb-4">Construyamos algo juntos</h2>
-                <RouterLink class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" to="/contacto">Contactame
-                </RouterLink>
-            </div>
-        </div>
-    </section>
-
+    
+    <Contruyamos></Contruyamos>
 </template>
