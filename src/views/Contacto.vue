@@ -1,36 +1,116 @@
-
 <script>
-import axios from 'axios'
+
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+
+const firebaseConfig = {
+    apiKey: import.meta.env.VITE_API_KEY_FIREBASE,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN_FIREBASE,
+    projectId: import.meta.env.VITE_PROJECT_ID_FIREBASE,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET_FIREBASE,
+    messagingSenderId: "32833905561",
+    appId: import.meta.env.VITE_APP_ID_FIREBASE,
+    measurementId: "G-SLMXMGPQSV"
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 export default {
-    data(){
-        return{
-           form : {
-            nombre: null,
-            correo: null,
-            telefono: null,
-            mensaje : null
-           }
+    data() {
+        return {
+            form: {
+                nombre: null,
+                correo: null,
+                telefono: null,
+                mensaje: null
+            },
+            lista_usuarios: [],
+            errores: {},
+            estado_envio: {
+                error: false,
+                mensaje: '',
+            },
         }
     },
-    methods: {
-        async enviarFormulario(){
-            try {
-                console.log(this.form);
-                
-                const response = await axios.post("", this.form)
+    mounted() {
+        this.getDatos();
 
-                console.log(response);
-                
+
+    },
+    methods: {
+        async getDatos() {
+            this.lista_usuarios = [];
+            const querySnapshot = await getDocs(collection(db, "Cv-custodio"));
+            querySnapshot.forEach((doc) => {
+                this.lista_usuarios.push(doc.data());
+            });
+
+        },
+        validarFormulario() {
+            this.errores = {};
+            if (!this.form.nombre) {
+                this.errores.nombre = 'El nombre es obligatorio.';
+            }
+            if (!this.form.correo) {
+                this.errores.correo = 'El correo es obligatorio.';
+            } else if (!this.validarCorreo(this.form.correo)) {
+                this.errores.correo = 'El correo no es válido.';
+            }
+            if (!this.form.mensaje) {
+                this.errores.mensaje = 'El mensaje es obligatorio.';
+            }
+            if (!this.form.telefono) {
+                this.errores.telefono = 'El telefono es obligatorio.';
+            }
+            return Object.keys(this.errores).length === 0; // Devuelve true si no hay errores
+        },
+        validarCorreo(correo) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(correo);
+        },
+        limpiarFormulario() {
+            this.form.nombre = '';
+            this.form.correo = '';
+            this.form.mensaje = '';
+            this.form.telefono = '';
+        },
+        async enviarFormulario() {
+
+            try {
+                try {
+                    if (this.validarFormulario()) {
+
+                        const docRef = await addDoc(collection(db, "Cv-custodio"), {
+                            nombre_completo: this.form.nombre,
+                            correo: this.form.correo,
+                            mensaje: this.form.mensaje,
+                            telefono: this.form.telefono,
+                            fecha: new Date()
+                        });
+                        this.estado_envio.error = false,
+                        this.estado_envio.mensaje = 'Enviado correctamente',
+                        //this.getDatos();
+                        this.limpiarFormulario();
+                    }
+                } catch (e) {
+                    this.estado_envio.error = true;
+                    this.estado_envio.mensaje = 'Error al enviar el formulario';
+                    console.error("Error al añadir documento: ", e);
+                }
+
             } catch (error) {
-                
+
                 console.log(error);
             }
+        },
+        verificaCompletado(condicion) {
+            return condicion === true ? 'invalid-feedback' : '';
         }
     },
     computed: {
-        
+
     },
-    props:{
+    props: {
 
     }
 }
@@ -49,67 +129,54 @@ export default {
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
                         <form @submit.prevent="enviarFormulario">
-
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" name="nombre" type="text" v-model="form.nombre"
                                     placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Nombre completo</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <div :class="verificaCompletado(errores.nombre) + ' text-danger'" data-sb-feedback="">{{ errores.nombre
+                                    }}
+                                </div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="email" type="email" name="email" v-model="form.correo"
                                     placeholder="name@example.com" data-sb-validations="required,email" />
                                 <label for="email">Correo electrónico</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
+                                <div :class="verificaCompletado(errores.correo)  + ' text-danger'" data-sb-feedback="">{{ errores.correo
+                                    }}
                                 </div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" name="telefono" type="tel" v-model="form.telefono"
-                                    placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" name="telefono" type="tel"
+                                    v-model="form.telefono" placeholder="(123) 456-7890" data-sb-validations="required" />
                                 <label for="phone">Número telefónico</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
-                                    required.</div>
+                                <div :class="verificaCompletado(errores.telefono)  + ' text-danger'" data-sb-feedback="">
+                                    {{ errores.telefono }}</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" name="mensaje" type="text" v-model="form.mensaje"
-                                    placeholder="Enter your message here..." style="height: 10rem"
+                                <textarea class="form-control" id="message" name="mensaje" type="text"
+                                    v-model="form.mensaje" placeholder="Coloca tu mensaje aqui..." style="height: 10rem"
                                     data-sb-validations="required"></textarea>
                                 <label for="message">Mensaje</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Enviar</div>
+                                <div :class="verificaCompletado(errores.mensaje)  + ' text-danger'" data-sb-feedback="">
+                                    {{ errores.mensaje }}</div>
                             </div>
                             <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
+                            
+                            <div :class="estado_envio.error == false ? '' : 'd-none'" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a
-                                        href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    <div class="fw-bolder text-success">{{ estado_envio.mensaje }}</div>
                                 </div>
                             </div>
                             <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage">
-                                <div class="text-center text-danger mb-3">Error al enviar el mensaje!</div>
+                            <div :class="estado_envio.error == true ? '' : 'd-none'" id="submitErrorMessage">
+                                <div class="text-center text-danger mb-3">{{ estado_envio.mensaje }}</div>
                             </div>
+
                             <!-- Submit Button-->
                             <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button></div>
                         </form>
