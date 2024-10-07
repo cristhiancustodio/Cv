@@ -8,21 +8,27 @@ export default{
             parametro:{
                 text:null,
                 tipo:'',
-            }
+            },
+            html:'',
         }
     },
     methods: {
         agregarParametro(){
             this.lista_parametros.push(
                 {
-                    text:this.parametro.text,
-                    tipo:this.parametro.tipo,
+                    text: this.parametro.text.trim(),
+                    tipo: this.parametro.tipo.trim(),
                 }
             );
             this.parametro.text = '';
             this.parametro.tipo = '';
         }
     },
+    mounted(){
+        let codigo = '<h1>Hola como estas</h1>'
+        this.html = codigo;
+        
+    }
 }
 </script>
 
@@ -59,27 +65,30 @@ export default{
                 </div>
             </div>
             <div class="col p-0">
-                CREATE OR REPLACE FUNCTION {{ this.nombre_funcion }}(
-                <br>
-                &nbsp;&nbsp;&nbsp;{{ (lista_parametros.map(item=> item.tipo)).join(', ') }}
-                <br>
-                )
-                RETURNS VOID AS 
-                <br>
-                $$
-                <br>
-                DECLARE
-                <br>
+                <pre>
+
+                    CREATE OR REPLACE FUNCTION {{ this.nombre_funcion }}(
+                    <br>
+                    &nbsp;&nbsp;&nbsp;{{ (lista_parametros.map(item=> item.tipo)).join(', ') }}
+                    <br>
+                    )
+                    RETURNS VOID AS 
+                    <br>
+                    $$
+                    <br>
+                    DECLARE
+                    <br>
                     {{ (lista_parametros.map((item, index) => `_${item.text} AS FOR $${index + 1}`)).join('; ') }}
                     {{ (lista_parametros != []) ? ';' : '' }}
-                &nbsp;&nbsp;&nbsp;
-                <br>
-                BEGIN
-                <br>
-                END;
-                <br>
-                $$ LANGUAGE plpgsql;
-
+                    &nbsp;&nbsp;&nbsp;
+                    <br>
+                    BEGIN
+                    <br>
+                    END;
+                    <br>
+                    $$ LANGUAGE plpgsql;
+                        
+                </pre>
             </div>
         </div>
     
