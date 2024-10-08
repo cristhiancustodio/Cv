@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  micv-desarrollo:
+    build: .
+    ports:
+      - "4000:5173"
+
+    container_name: micv-dev
+
+    #Segun teoria esto hara que cuando hagamos cambios en nuestro sistema
+    #tambien se vera en el servidor de docker
+    #Como produccion no tienes este volumen, entonces todo lo que hagamos no se verá
+    volumes:
+      - .:/app # Monta el directorio actual en /app del contenedor
+      - /app/node_modules  # Asegura que la carpeta node_modules dentro del contenedor no sea sobreescrita
+
+    command: npm run dev
+
+  
+  micv-produccion:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:4173"
+    container_name: micv-prod
+  
+    command: sh -c "npm run build && npm run preview" # Ejecutar el comando de producción
