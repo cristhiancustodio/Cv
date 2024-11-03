@@ -9,13 +9,13 @@ const lista_imagenes =  [
     "/img/Cinestar/cinestar_5.png",
 ];
 const img_tec_usadas = [
-    {img:"/img/iconos_svg/laravel.svg",descripcion:'Laravel'},
-    {img:"/img/iconos_svg/flask.svg",descripcion:'Flask'},
-    {img:"/img/iconos_svg/nodejs.svg",descripcion:'Node JS'},
-    {img:"/img/iconos_svg/express.svg",descripcion:'Express JS'},
-    {img:"/img/iconos_svg/api.svg",descripcion:'API'},
-    {img:"/img/iconos_svg/html.svg",descripcion:'Html'},
-    {img:"/img/iconos_svg/css.svg",descripcion:'Css'},
+    {img:"/img/iconos_svg/laravel.svg",descripcion:''},
+    {img:"/img/iconos_svg/flask.svg",descripcion:''},
+    {img:"/img/iconos_svg/nodejs.svg",descripcion:''},
+    {img:"/img/iconos_svg/express.svg",descripcion:''},
+    {img:"/img/iconos_svg/api.svg",descripcion:''},
+    {img:"/img/iconos_svg/html.svg",descripcion:''},
+    {img:"/img/iconos_svg/css.svg",descripcion:''},
     
 
 ];

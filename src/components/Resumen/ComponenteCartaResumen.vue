@@ -24,10 +24,13 @@ export default {
         </div>
         <div class="row">
             <div class="col-md-3 mt-4" v-for="(item, indice) in listado" :key="indice">
-                <div class="bg-light rounded-4 p-3 h-100">
+                <div class="bg-light rounded-4 p-3">
                     <div class="row text-center">
                         <div class="col-12">
-                            <img :src="'/img/iconos_svg/' + item.icono" alt="" height="50">
+                            <img :src="'/img/iconos_svg/' + item.icono" alt="" height="50" :title="item._titulo || item._titulo">
+                        </div>
+                        <div class="col-12" v-if="item.estudiando == true">
+                            <span class="text-danger fs-4" title="Actualmente estudiando">*</span>
                         </div>
                         <div class="col-12">
                             {{ item.titulo }}
@@ -36,17 +39,5 @@ export default {
                 </div>
             </div>
         </div>
-        <!-- <div class="row d-none">
-            <div class="col-3">
-                <a class="btn btn-primary " @click="agregarMasHabilidades()">
-                    <div class="d-inline-block bi bi-plus"></div>
-                    Agregar
-                </a>
-            </div>
-            <div class="col">
-                <input type="text" placeholder="Escribe una habilidad" class="form-control"
-                    id="habilidad" v-model="habilidad">
-            </div>
-        </div> -->
     </div>
 </template>

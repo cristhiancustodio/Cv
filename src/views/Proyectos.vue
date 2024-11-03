@@ -47,7 +47,11 @@ export default {
                         <div class="card-body p-0">
                             <div class="row">
                                 <div class="col-12 col-lg-6 col-sm-12 col-xs-12 p-5">
-                                    <RouterLink :to="'/proyecto/' + (item.id)" class=""><h4 class="fw-bolder">{{ item.titulo }}</h4></RouterLink> 
+                                    <RouterLink :to="'/proyecto/' + (item.id)" class="text-decoration-none">
+                                        <h4 class="fw-bolder">{{ item.titulo }}
+                                            <i class="bi-link-45deg"></i>
+                                        </h4>
+                                    </RouterLink> 
                                     <p v-html="formattedDescripcion(item.descripcion)" ></p>
                                 </div>
                                 <div class="col-12 col-lg-6 col-sm-12 col-xs-12">

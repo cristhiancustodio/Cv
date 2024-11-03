@@ -8,10 +8,10 @@ const lista_imagenes =  [
     "/img/Asistencia/asistencia_11.png","/img/Asistencia/asistencia_12.png","/img/Asistencia/asistencia_13.png","/img/Asistencia/asistencia_14.png","/img/Asistencia/asistencia_15.png","/img/Asistencia/asistencia_17_2.png","/img/Asistencia/asistencia_17.png",
 ];
 const img_tec_usadas = [
-    {img:"/img/iconos_svg/codeigniter.svg",descripcion:'Codeigniter 4'},
-    {img:"/img/iconos_svg/mysql.svg",descripcion:'MySql'},
-    {img:"/img/iconos_svg/bootstrap.svg",descripcion:'Bootstrap'},
-    {img:"/img/iconos_svg/php.svg",descripcion:'PHP'},
+    {img:"/img/iconos_svg/codeigniter.svg",descripcion:''},
+    {img:"/img/iconos_svg/mysql.svg",descripcion:''},
+    {img:"/img/iconos_svg/bootstrap.svg",descripcion:''},
+    {img:"/img/iconos_svg/php.svg",descripcion:''},
     {img:"/img/iconos_svg/vue.svg",descripcion:'Vue 3'},
     {img:"/img/iconos_svg/axios.svg",descripcion:'Axios'},
     {img:"https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png",descripcion:'Puppeter'},

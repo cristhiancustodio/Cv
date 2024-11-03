@@ -9,14 +9,13 @@ const lista_imagenes =  [
     "/img/Reclutamiento/reclutamiento_5.png",
 ];
 const img_tec_usadas = [
-    {img:"/img/iconos_svg/codeigniter.svg",descripcion:'Codeigniter 4'},
-    {img:"/img/iconos_svg/mysql.svg",descripcion:'MySql'},
-    {img:"/img/iconos_svg/bootstrap.svg",descripcion:'Bootstrap'},
-    {img:"/img/iconos_svg/php.svg",descripcion:'PHP'},
-    {img:"/img/iconos_svg/js.svg",descripcion:'Js'},
-    {img:"/img/iconos_svg/jquery.svg",descripcion:'JQuery'},
+    {img:"/img/iconos_svg/codeigniter.svg",descripcion:''},
+    {img:"/img/iconos_svg/mysql.svg",descripcion:''},
+    {img:"/img/iconos_svg/bootstrap.svg",descripcion:''},
+    {img:"/img/iconos_svg/php.svg",descripcion:''},
+    {img:"/img/iconos_svg/js.svg",descripcion:''},
+    {img:"/img/iconos_svg/jquery.svg",descripcion:''},
     {img:"/img/iconos_svg/axios.svg",descripcion:'Axios'},
-    
     
     {img:"https://avatars.githubusercontent.com/u/3959702?s=48&v=4",descripcion:'PHPMailer'},
     {img:"https://products.fileformat.com/spreadsheet/php/phpspreadsheet/header-image.png",descripcion:'Php Spreadsheet'},

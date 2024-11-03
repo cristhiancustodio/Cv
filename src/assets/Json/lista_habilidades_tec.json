@@ -1,71 +1,76 @@
 {
     "frontend": [
         {
-            "titulo": "HTML",
+            "_titulo": "HTML",
             "icono": "html.svg"
         },
         {
-            "titulo": "CSS",
+            "_titulo": "CSS",
             "icono": "css.svg"
         },
         {
-            "titulo": "JS",
+            "_titulo": "JS",
             "icono": "js.svg"
         },
         {
-            "titulo": "Bootstrap",
+            "_titulo": "Bootstrap",
             "icono": "bootstrap.svg"
         },
         {
-            "titulo": "JQuery",
+            "_titulo": "JQuery",
             "icono": "jquery.svg"
         },
         {
-            "titulo": "Axios",
+            "_titulo": "Axios",
             "icono": "axios.svg"
         }
         
     ],
     "backend":[
         {
-            "titulo": "PHP",
+            "_titulo": "PHP",
             "icono": "php.svg"
         },
         {
-            "titulo": "Node js",
+            "_titulo": "Node js",
             "icono": "nodejs.svg"
         },
         {
-            "titulo": "Python",
+            "_titulo": "Python",
             "icono": "python.svg"
         }
     ],
     "frameworks":[
         {
-            "titulo": "Laravel",
+            "_titulo": "Laravel",
             "icono": "laravel.svg"
         },
         {
-            "titulo": "Codeigniter",
+            "_titulo": "Codeigniter",
             "icono": "codeigniter.svg"
         },
         {
-            "titulo": "Flask",
+            "_titulo": "Flask",
             "icono": "flask.svg"
         },
         {
-            "titulo": "Vue 3",
+            "_titulo": "Vue 3",
             "icono": "vue.svg"
         }
     ],
     "base_datos" :[
         {
-            "titulo": "SQLServer",
+            "titulo": "SQLServer\n(Intermedio)",
             "icono": "sql_server.svg"
         },
         {
-            "titulo": "MySql",
+            "titulo": "MySql\n(Intermedio)",
             "icono": "mysql.svg"
+        }
+        ,
+        {
+            "titulo": "PostgreSQL\n(Básico)",
+            "icono": "postgre.svg"
         }
     ],
     "herramientas":[
@@ -88,28 +93,29 @@
     ],
     "pendiente":[
         {
-            "titulo": "React",
+            "_titulo": "Amazon web services",
+            "icono": "amazon.svg",
+            "estudiando": true
+        },
+        {
+            "_titulo": "React",
             "icono": "react.svg"
         },
         {
-            "titulo": "Docker",
+            "_titulo": "Docker",
             "icono": "docker.svg"
         },
         {
-            "titulo": "Microsoft Azure",
+            "_titulo": "Microsoft Azure",
             "icono": "azure.svg"
         },
         {
-            "titulo": "Express",
+            "_titulo": "Express",
             "icono": "express.svg"
         },
         {
-            "titulo": "Java",
+            "_titulo": "Java",
             "icono": "java.svg"
-        },
-        {
-            "titulo": "Xamarin",
-            "icono": "xamarin.svg"
         }
     ]
 }

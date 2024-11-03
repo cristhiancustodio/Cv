@@ -5,7 +5,6 @@ import lista_experiencia from "../assets/Json/experiencia.json"
 import ComponenteCartaResumen from "@/components/Resumen/ComponenteCartaResumen.vue";
 import { formatTexto } from "@/assets/js/utils";
 
-
 export default {
     data() {
         return {
@@ -144,6 +143,11 @@ export default {
                                 :listado="lista_habilidades.pendiente" 
                                 icono_cabecera="bi bi-code-slash"
                                 />
+                            </div>
+                            <div class="card-body">
+                                <span class="text-danger" style="font-size: 12px;">
+                                    * Actualmente estudiando
+                                </span>
                             </div>
                         </div>
                     </section>
