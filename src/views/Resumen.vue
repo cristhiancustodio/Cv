@@ -47,7 +47,7 @@ export default {
                             <!-- Download resume button-->
                             <!-- Note: Set the link href target to a PDF file within your project-->
                             <div class="col-12 col-lg-3">
-                                <a class="btn btn-sm btn-primary px-2 py-2 w-100" href="/storage/micv/cv_cristhian_custodio.pdf" download>
+                                <a class="btn btn-sm btn-primary px-2 py-2 w-100" href="https://d21r5h9y0cojdj.cloudfront.net/cv/cv-custodio-cristhian.pdf" target="_blank">
                                     <div class="d-inline-block bi bi-download me-2"></div>Descargar CV
                                 </a>
                             </div>
