@@ -8,7 +8,7 @@
                 <div class="col-auto flex-column">
                     <div class="row">
                         <div v-for="(item, key) in lista_enlaces" class="col-auto" >
-                            <a :key="key"  class="large" :href="item.enlace">{{ item.texto }}</a>
+                            <a :key="key"  class="large text-decoration-none" :href="item.enlace">{{ item.texto }}</a>
                         </div>
                         
                     </div>
@@ -18,11 +18,7 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap core JS
-    <script src="{{ asset('js/Bootstrap/bootstrap.bundle.min.js')}}"></script>
-    Core theme JS
-    <script src="{{ asset('js/scripts.js') }}"></script>
-    <script src="{{ asset('js/footer.js') }}"></script> -->
+
 </template>
 
 <script>

@@ -24,9 +24,9 @@ export default {
                     <li class="nav-item">
                         <RouterLink class="nav-link lista_enlaces" to="/proyectos">Mis proyectos</RouterLink>
                     </li>
-                    <!-- <li class="nav-item">
-                        <RouterLink class="nav-link lista_enlaces" to="/contacto">Contacto</RouterLink>
-                    </li> -->
+                    <li class="nav-item">
+                        <RouterLink class="nav-link lista_enlaces" to="/contacto">Contactame</RouterLink>
+                    </li>
                 </ul>
             </div>
         </div>
