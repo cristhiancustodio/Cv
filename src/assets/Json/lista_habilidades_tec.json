@@ -56,6 +56,10 @@
         {
             "_titulo": "Vue 3",
             "icono": "vue.svg"
+        },
+        {
+            "_titulo": "React",
+            "icono": "react.svg"
         }
     ],
     "base_datos" :[
@@ -94,12 +98,7 @@
     "pendiente":[
         {
             "_titulo": "Amazon web services",
-            "icono": "amazon.svg",
-            "estudiando": true
-        },
-        {
-            "_titulo": "React",
-            "icono": "react.svg"
+            "icono": "amazon.svg"
         },
         {
             "_titulo": "Docker",
