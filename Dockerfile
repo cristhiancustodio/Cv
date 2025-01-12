@@ -9,7 +9,7 @@ COPY package*.json ./
 
 
 
-COPY . ./app 
+COPY . .
 #el primer punto indica que copiaremos todos los archivos y el segundo punto indica que copiaremos
 
 RUN npm install 

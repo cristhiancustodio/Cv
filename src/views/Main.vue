@@ -42,23 +42,28 @@ export default {
                 <div class="bg-light col-xxl-7 rounded-4">
                     <div class="text-center my-5">
                         <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Acerca de mi</span></h2>
-                        <p class="lead fw-light mb-4" style="text-align:justify; line-height: 33px">
-                            Técnico en Ingeniería de Software orientado al desarrollo backend, 
-                            enfocado en optimizar procesos y mejorar la arquitectura de 
-                            software. 
-                            <br>
-                            Tengo buen dominio en PHP, NodeJS, JavaScript, MySQL - SQL Server y 
-                            algunas tecnologías más que constantemente voy estudiando en 
-                            mis proyectos de software personales.
-                            <br>
-                            Conocimientos en frontend en JavaScript como Vue 3, Bootstrap y 
-                            CSS nativo, lo que me permite colaborar en proyectos de 
-                            desarrollo completo de aplicaciones web.
-                            <br>
-                            Me considero disciplinado, autodidacta y con muchas ganas de 
-                            aprender y aportar con mi trabajo en el lugar donde vaya a 
-                            laborar, siempre dando lo mejor de mí
-                        </p>
+                        <div class="lead fw-light mb-4" style="text-align:justify; line-height: 33px">
+                            <p>
+                                Técnico en Ingeniería de Software orientado al desarrollo backend, 
+                                enfocado en optimizar procesos y mejorar la arquitectura de 
+                                software. 
+                            </p>
+                            <p>
+                                Tengo buen dominio en PHP, NodeJS, JavaScript, MySQL - SQL Server y 
+                                algunas tecnologías más que constantemente voy estudiando en 
+                                mis proyectos de software personales.
+                            </p>
+                            <p> 
+                                Conocimientos en frontend en JavaScript como Vue 3, React, Bootstrap, Tailwind y 
+                                CSS nativo, lo que me permite colaborar en proyectos de 
+                                desarrollo completo de aplicaciones web.
+                            </p>
+                            <p>
+                                Me considero disciplinado, autodidacta y con muchas ganas de 
+                                aprender y aportar con mi trabajo en el lugar donde vaya a 
+                                laborar, siempre dando lo mejor de mí
+                            </p>
+                        </div>
                         <p class="text-muted">
 
                         </p>
